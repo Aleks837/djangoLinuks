@@ -1,0 +1,28 @@
+sudo apt-get update
+sudo apt-get install python3-django
+django-admin --version
+sudo apt-get install python3-pip
+sudo pip3 install django
+django-admin --version
+sudo pip3 install virtualenv
+mkdir ~/newproject
+cd ~/newproject
+virtualenv newenv
+source newenv/bin/activate
+pip install django
+django-admin startproject projectname .
+cd projectname
+python3 manage.py migrate
+python3 manage.py createsuperuser
+sudo ufw allow 8000
+python3 manage.py runserver 0.0.0.0:8000
+python manage.py runserver
+
+в /settings.py
+TIME_ZONE = 'Europe/Moscow'
+LANGUAGE_CODE = 'ru-ru'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  
+в конце файла
+
+
